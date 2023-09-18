@@ -4,9 +4,17 @@ const windowContainer = document.getElementById("window-container"),
 document.addEventListener("keydown", (e) => {
     if ("`" === e.key && "none" === windowContainer.style.display) {
         windowContainer.style.display = "block";
-        const e = new Audio("intro.mp3");
+
+        files = ["intro.mp3", "call.mp3"]
+
+        const saulAudio = new Audio(
+            "./assets/" + files[Math.floor(Math.random() * files.length)]
+        );
+
+        console.log(saulAudio)
+
         codeInput.addEventListener("input", () => {
-            "LWYRUP" === codeInput.value.trim().toUpperCase() && e.play();
+            "LWYRUP" === codeInput.value.trim().toUpperCase() && saulAudio.play();
         });
     }
 });

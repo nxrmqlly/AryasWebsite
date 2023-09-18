@@ -4,7 +4,12 @@ const windowContainer = document.getElementById("window-container"),
 document.addEventListener("keydown", (e) => {
     if ("`" === e.key && "none" === windowContainer.style.display) {
         windowContainer.style.display = "block";
-        const e = new Audio("intro.mp3");
+
+        files = ["intro.mp3", "call.mp3"]
+
+        const e = new Audio(
+            files[Math.floor(Math.random() * files.length)]
+        );
         codeInput.addEventListener("input", () => {
             "LWYRUP" === codeInput.value.trim().toUpperCase() && e.play();
         });

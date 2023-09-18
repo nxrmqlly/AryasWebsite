@@ -291,4 +291,42 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #404074;
   }
-  
+  .album-art {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+ .song-name {
+    color: #81A1C1 !important;
+ }
+
+ .artist-name {
+    color: #A3BE8C !important;
+ }
+
+ .album-name {
+    color: #B48EAD !important;
+ }
+
+.animated-img-container {
+  float: right;
+  width: 360px; 
+}
+
+.animated-img {
+  max-height: 300px;
+  margin-top: 200px;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+

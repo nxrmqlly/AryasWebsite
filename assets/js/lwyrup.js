@@ -7,11 +7,14 @@ document.addEventListener("keydown", (e) => {
 
         files = ["intro.mp3", "call.mp3"]
 
-        const e = new Audio(
-            files[Math.floor(Math.random() * files.length)]
+        const saulAudio = new Audio(
+            "./assets/" + files[Math.floor(Math.random() * files.length)]
         );
+
+        console.log(saulAudio)
+
         codeInput.addEventListener("input", () => {
-            "LWYRUP" === codeInput.value.trim().toUpperCase() && e.play();
+            "LWYRUP" === codeInput.value.trim().toUpperCase() && saulAudio.play();
         });
     }
 });
